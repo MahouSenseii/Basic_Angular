@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import { MainComponent } from './main/main.component'
+import { HomeComponent } from './Home/home.component'
 
 const routes: Routes = [
-  {path: '', redirectTo: '/main', pathMatch: "full"},
+  {path: '', redirectTo: 'home', pathMatch:'full'}, 
   {path: 'about', component:AboutComponent},
-  {path: 'main', component:MainComponent},
+  {path: 'home', component: HomeComponent}
 ]
 
 
 @NgModule({
   declarations: [
     AboutComponent,
-    MainComponent,
+    HomeComponent,
    ],
   imports: [RouterModule.forRoot(routes),],
   exports: [RouterModule]
